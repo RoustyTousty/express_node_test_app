@@ -31,13 +31,15 @@ function updatePosts() {
             for (i in postsList) {
                 const newBody = document.createElement('p');
                 const newTitle = document.createElement('h2');
-        
+                const newLine = document.createElement('hr');
+                
                 newBody.innerHTML = postsList[i].body
                 newTitle.innerHTML = postsList[i].title
-        
+                
+                postsDiv.appendChild(newLine)
                 postsDiv.appendChild(newTitle);
                 postsDiv.appendChild(newBody);
             }
         })
-        .catch(error => console.error(error));
+        .catch(error => console.error(error));  
 }
